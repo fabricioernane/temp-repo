@@ -1,1 +1,19 @@
 Um teste qualquer neste arquivo
+
+ssh-keygen -t rsa -f "/c/Users/foreb/.ssh/github" -C 'fabricioernane@gmail.com'
+
+#Quando fechar o terminal preciso executar isso
+eval "$(ssh-agent -s)"
+ssh-add /c/Users/foreb/.ssh/github
+
+#Iniciando o git
+
+git init
+git config --global user.name "Fabricio de Siqueira"
+git config --global user.email "fabricioernane@gmail.com"
+git remote add origin git@github.com:fabricioernane/temp-repo.git
+
+#Editei
+git add .
+git commit -m 'Initial'
+git push origin master
